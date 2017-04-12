@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UVAbuildings</string>
+    <string name="title_activity_near_you">Map</string>
+    <string name="title_activity_category_select">Map</string>
+</resources>
