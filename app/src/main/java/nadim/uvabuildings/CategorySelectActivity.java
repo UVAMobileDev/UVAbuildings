@@ -32,6 +32,7 @@ import static java.lang.Double.parseDouble;
  */
 public class CategorySelectActivity extends FragmentActivity implements OnMapReadyCallback {
 
+    private static final String API_KEY = BuildConfig.API_KEY;
     private GoogleMap mMap;
     private String newString;
 
@@ -64,7 +65,7 @@ public class CategorySelectActivity extends FragmentActivity implements OnMapRea
         //replace spaces with url encoding
         newString = newString.replace(" ", "%20");
         //api call
-        String url = "http://138.197.11.189:3000/api/categories/" + newString;
+        String url = "http://138.197.11.189:3000/api/" + API_KEY +"/categories/" + newString;
         HttpConnectionJsonVariable con = new HttpConnectionJsonVariable();
         //create hashmap to store info
         HashMap<String, LatLng> markInfo = new HashMap<String, LatLng>();

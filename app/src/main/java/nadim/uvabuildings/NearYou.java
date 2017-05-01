@@ -57,6 +57,7 @@ public class NearYou extends FragmentActivity implements OnMapReadyCallback, Goo
         GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
     //declare variables for map, apiClient, etc.
+    private static final String API_KEY = BuildConfig.API_KEY;
     private GoogleMap mMap;
     private GoogleApiClient mGoogleApiClient;
     private LocationRequest mLocationRequest;
@@ -124,7 +125,7 @@ public class NearYou extends FragmentActivity implements OnMapReadyCallback, Goo
     //query method, used to call api storing building information
     private void query(Location location) {
         //url for api call
-        String url = "http://138.197.11.189:3000/api/buildings/";
+        String url = "http://138.197.11.189:3000/api/" + API_KEY + "/buildings/";
         //call class to run get request in background
         HttpUrlConnectionJson con = new HttpUrlConnectionJson();
         //create a hashmap to store name and location data for each building

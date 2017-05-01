@@ -33,6 +33,7 @@ import nadim.uvabuildings.R;
 public class ByCategory extends ListActivity {
 
     //declare listview and listadapter
+    private static final String API_KEY = BuildConfig.API_KEY;
     private ListView mainListView ;
     private ArrayAdapter<String> listAdapter ;
 
@@ -68,7 +69,7 @@ public class ByCategory extends ListActivity {
 
     private void query() {
         //url for api
-        String url = "http://138.197.11.189:3000/api/categories";
+        String url = "http://138.197.11.189:3000/api/" + API_KEY + "/categories";
         //initialize query background class
         QueryCategory con = new QueryCategory();
         ArrayList<String> cat = new ArrayList<String>();

@@ -25,7 +25,7 @@ import static java.lang.Integer.parseInt;
  */
 public class MarkerDescription extends AppCompatActivity {
 
-
+    private static final String API_KEY = BuildConfig.API_KEY;
     private String newString;
     private String address;
     private String latitude;
@@ -109,7 +109,7 @@ public class MarkerDescription extends AppCompatActivity {
         String hold= "";
         //url encode building name and create url
         hold = newString.replace(" ", "%20");
-        String url = "http://138.197.11.189:3000/api/buildings/" + hold;
+        String url = "http://138.197.11.189:3000/api/" + API_KEY + "/buildings/" + hold;
         DescriptionDownload con = new DescriptionDownload();
         ArrayList<String> markInfo = new ArrayList<String>();
         try {
